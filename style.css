@@ -8,13 +8,21 @@
   font-size: 62.5%;
   --bgc-primary: #efefef;
   --bgc-secondary: #535971;
+  --bgc-tertiary: #fff;
+  --fc-primary: #4e4958;
   --fc-secondary: #fff;
+  --fc-tertiary: #535971;
   --ff-primary: "Poppins", sans-serif;
   --ff-secondary: "staatliches", sans-serif;
+  --separator-color: #e6e6f0;
+  --input-border-color: #e6e6f0;
+  --input-bgc: #fafafc;
+  --span-hover-color: #c1bccc;
 }
 
 body {
   background: var(--bgc-primary);
+  font-weight: 400;
 }
 
 body::before {
@@ -36,12 +44,13 @@ body::before {
 
 header {
   color: var(--fc-secondary);
-  font-weight: 400;
   width: 41.7rem;
 
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+
+  margin-bottom: 5.8rem;
 }
 
 header h1 {
@@ -55,4 +64,70 @@ header p {
   font-family: var(--ff-primary);
   font-size: 2rem;
   line-height: 3rem;
+}
+
+form {
+  min-height: 40rem;
+  background: var(--bgc-tertiary);
+  border-radius: 2rem 2rem 0 0;
+  padding: 6.4rem;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: var(--fc-tertiary);
+  font-family: var(--ff-secondary);
+
+  margin-bottom: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--separator-color);
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 100%;
+}
+
+.input-wrapper label {
+  font-family: var(--ff-primary);
+  color: var(--fc-primary);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+label span {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+label span:hover {
+  color: #c1bccc;
+}
+
+.input-wrapper input {
+  background: var(--input-bgc);
+  height: 5.6rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+}
+
+.col-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.2rem;
 }
