@@ -165,6 +165,10 @@ label span:hover {
   padding-left: 1rem;
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+
 .col-2 {
   display: flex;
   justify-content: space-between;
